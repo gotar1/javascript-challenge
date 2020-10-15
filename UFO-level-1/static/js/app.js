@@ -6,16 +6,6 @@ let table = d3.select(".table-striped");
 let tbody = d3.select("tbody");
 
 let thead = d3.select("thead");
-// thead.html("");
-// let headerRow = thead.append('tr');
-// headerRow.append('th').text(Date);
-// headerRow.append('th').text(City);
-// headerRow.append('th').text(State);
-// headerRow.append('th').text(Country);
-// headerRow.append('th').text(Shape);
-// headerRow.append('th').text(Duration);
-// headerRow.append('th').text(Comments);
-
 
 function tableInfo(ufoInfo) {
     tbody.html("");
@@ -54,3 +44,5 @@ function filterTable() {
     tableInfo(filteredTable);
 
 };
+
+
