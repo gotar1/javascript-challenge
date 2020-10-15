@@ -21,8 +21,9 @@ function tableInfo(ufoInfo) {
 }
 tableInfo(tableData);
 
-// let correctDate = d3.select('#date-correct');
+let errDisplay = d3.select('#date-correct');
 // let button = d3.select('#filter-btn');
+// let dataInputField = d3.select('#data-filter');
 let dateInputField = d3.select('#datetime-filter');
 let cityInputField = d3.select('#city-filter');
 let stateInputField = d3.select('#state-filter');
@@ -30,6 +31,7 @@ let countryInputField = d3.select('#country-filter');
 let shapeInputField = d3.select('#shape-filter');
 
 // button.on("click", filterTable);
+// dataInputField.on("change", filterTable);
 dateInputField.on("change", filterTable);
 cityInputField.on("change", filterTable);
 stateInputField.on("change", filterTable);
@@ -39,6 +41,8 @@ shapeInputField.on("change", filterTable);
 // create function to filter data based on user input
 function filterTable() {
     d3.event.preventDefault();
+    // let dataInputValue = dataInputField.property('value');
+
     let inputValueDate = dateInputField.property('value');
     let inputValueCity = cityInputField.property('value');
     let inputValueState = stateInputField.property('value');
@@ -47,24 +51,31 @@ function filterTable() {
 
     let filteredTable = tableData.filter(item => {
         return (
+            // item.datetime === dataInputValue ||
+            // item.city === dataInputValue || 
+            // item.state === dataInputValue ||
+            // item.country === dataInputValue ||
+            // item.shape === dataInputValue
+
             item.datetime === inputValueDate ||
             item.city === inputValueCity || 
             item.state === inputValueState ||
             item.country === inputValueCountry ||
             item.shape === inputValueShape
-        )
-    })
-    tableInfo(filteredTable);
+        );
+    });
+    
+    if(filteredTable.length == 0) {
+        // let filteredTable = tableData;
+        tableInfo(tableData);
+        errDisplay.html("");
+        errDisplay.text("Data out of range, please input correct data..");
+    }
+    else {
 
-    // if(typeof filteredTable === "undefined" || filteredTable === null) {
-    //     let filteredTable = tableData;
-    //     tableInfo(filteredTable);
-    //     correctDate.html("");
-    //     // let correction = correctDate.append('p');
-    //     correctDate.text("Date out of range, please input correct date..");
-    // }
-    // tableInfo(filteredTable);
+        tableInfo(filteredTable);
+    }
     console.log('love')
-
+    
 };
 
