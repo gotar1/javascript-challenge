@@ -21,7 +21,7 @@ function tableInfo(ufoInfo) {
 }
 tableInfo(tableData);
 
-let correctDate = d3.select('#date-correct');
+let errDisplay = d3.select('#date-correct');
 let button = d3.select('#filter-btn');
 let inputField = d3.select('#datetime')
 
@@ -30,18 +30,26 @@ button.on("click", filterTable);
 
 function filterTable() {
     d3.event.preventDefault();
+    errDisplay.text('');
+
     let inputField = d3.select('#datetime');
     let inputValue = inputField.property('value');
     let filteredTable = tableData.filter(date => date.datetime === inputValue);
-    if(typeof filteredTable === "undefined" || filteredTable === null) {
-        let filteredTable = tableData;
-        tableInfo(filteredTable);
-        correctDate.html("");
-        // let correction = correctDate.append('p');
-        correctDate.text("Date out of range, please input correct date..");
-        console.log(filteredTable)
+
+    errDisplay.html("");
+    errDisplay.text("Did you find what you looking for?? Keep searching..");
+
+    if(filteredTable.length == 0) {
+        // let filteredTable = tableData;
+        tableInfo(tableData);
+        errDisplay.html("");
+        errDisplay.text("Date out of range, please input correct date..");
+        console.log(errDisplay);
     }
-    tableInfo(filteredTable);
+    else {
+
+        tableInfo(filteredTable);
+    }
 
 };
 
