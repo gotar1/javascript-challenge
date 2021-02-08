@@ -16,8 +16,6 @@ That's why we need to create a webpage with a table that is dynamically based up
 
 We will also allow our users to filter the table data for specific values.
 
-![ufo](images/ufo.svg) 
-
 ## Analysis
 
 Broken into two levels:
