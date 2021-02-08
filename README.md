@@ -33,7 +33,7 @@ Broken into two levels:
 the `date/time` column to find rows that match user input.
 
 #### <a id="ufo1"></a>UFO Level-1		
-![ufo](UFO-levle-1/static/images/ufo1.png)
+![ufo1](UFO-levle-1/static/images/ufo1.png)
 
 ### Level 2: Multiple Search Categories
 
@@ -46,7 +46,7 @@ sightings using the following criteria based on the table columns:
   4. `country`
   5. `shape`
 #### <a id="ufo2"></a>UFO Level-2		
-![ufo](UFO-levle-1/static/images/ufo2.png)
+![ufo2](UFO-levle-1/static/images/ufo2.png)
 
 - - -
 
