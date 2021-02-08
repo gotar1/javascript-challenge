@@ -1,5 +1,7 @@
 # javascript- JavaScript and DOM Manipulation
 
+![ufo](images/ufo.png)                    ![ufo1](images/nasa.png)
+
 ## Background
 
 WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we have collected all of the eye-witness 
@@ -33,7 +35,7 @@ Broken into two levels:
 the `date/time` column to find rows that match user input.
 
 #### <a id="ufo1"></a>UFO Level-1		
-![ufo1](UFO-levle-1/static/images/ufo1.png)
+![ufo1](images/ufo1.png)
 
 ### Level 2: Multiple Search Categories
 
@@ -46,7 +48,7 @@ sightings using the following criteria based on the table columns:
   4. `country`
   5. `shape`
 #### <a id="ufo2"></a>UFO Level-2		
-![ufo2](UFO-levle-1/static/images/ufo2.png)
+![ufo2](images/ufo2.png)
 
 - - -
 
