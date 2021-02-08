@@ -1,6 +1,4 @@
-# javascript- JavaScript and DOM Manipulation
-
-![ufo](images/ufo.svg)                    
+# javascript- JavaScript and DOM Manipulation                   
 
 ![nasa](images/nasa.jpg)
 
@@ -17,6 +15,8 @@ Even our most dedicated followers are complaining that they are having trouble l
 That's why we need to create a webpage with a table that is dynamically based upon a [dataset](UFO-level-1/static/js/data.js) using JavaScript, HTML, CSS, and D3.
 
 We will also allow our users to filter the table data for specific values.
+
+![ufo](images/ufo.svg) 
 
 ## Analysis
 
