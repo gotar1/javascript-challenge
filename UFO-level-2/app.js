@@ -25,7 +25,7 @@ function buildTable(ufoInfo) {
 
 // Keep Track of all filters
 let filters = {};
-
+console.log(filters)
 function updateFilters() {
 
   // Save the element, value, and id of the filter that was changed
@@ -37,6 +37,7 @@ function updateFilters() {
   // to the filters list. Otherwise, clear that filter from the filters object
   if (elementValue) {
     filters[filterId] = elementValue;
+    console.log(filters)
   }
   else {
     delete filters[filterId];
@@ -58,6 +59,7 @@ function filterTable() {
     // matches the filter values
     Object.entries(filters).forEach(([key, value]) => {
         filteredData = filteredData.filter(row => row[key] === value);
+        console.log(filteredData)
     });
 
     // prevent default and clear error holder text if any
