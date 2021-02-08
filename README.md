@@ -1,6 +1,6 @@
 # javascript- JavaScript and DOM Manipulation
 
-![ufo](images/ufo.png)                    ![ufo1](images/nasa.png)
+![ufo](images/ufo.png)                    ![nasa](images/nasa.png)
 
 ## Background
 
